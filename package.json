@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Crazy Cards",
   "main": "index.js",
+  "homepage": "https://mattjleach.github.io/crazy-cards/",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "rm -rf dist && webpack --config webpack.prod.config.js --progress --profile --color",

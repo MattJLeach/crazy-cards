@@ -21,7 +21,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        exclude: /node_modules/,
+        exclude: [path.join(__dirname, "node_modules"), path.join(__dirname, "src/sass")],
         loaders: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
