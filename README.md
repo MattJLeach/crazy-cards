@@ -1,3 +1,9 @@
-# React Boilerplate
+# Crazy Cards
 
-Rather than using the Create React App, I want a more customisable starting point for my React apps. I will be adding in testing once I decide on which testing library to go with.
+To run locally, clone the repo and run
+```
+npm install
+npm start
+```
+
+Navigate to `http://localhost:8080/`
