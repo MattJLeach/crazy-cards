@@ -39,10 +39,21 @@ class Results extends Component {
   }
 
   componentDidMount() {
+    this.setState({cards: this.updateDetails()});
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    const details = this.updateDetails();
+    if(nextProps.status !== this.props.status || nextProps.income !== this.props.income) {
+      this.setState({cards: details});
+    }
+  }
+
+  updateDetails() {
     const details = {...this.state.cards};
     details.studentLifeCard.available = this.props.status === 'student';
     details.liquidCard.available = this.props.income > 16000;
-    this.setState({cards: details});
+    return details;
   }
 
   availableBalance = () => {
